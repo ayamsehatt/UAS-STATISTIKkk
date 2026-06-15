@@ -2,12 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# =========================
-
 # 1. MEMBACA DATA
-
-# =========================
-
 df = pd.read_csv("statistik_populasi_sulteng.csv")
 
 print("=" * 50)
@@ -23,23 +18,13 @@ print(df.info())
 print("\n=== STATISTIK DESKRIPTIF ===")
 print(df.describe())
 
-# =========================
-
 # 2. TOTAL POPULASI
-
-# =========================
-
 total_populasi = df["populasi_ribu"].sum()
 
 print("\n=== TOTAL POPULASI ===")
 print(f"Total Populasi : {total_populasi:,.2f} ribu jiwa")
 
-# =========================
-
 # 3. POPULASI TERBESAR DAN TERKECIL
-
-# =========================
-
 terbesar = df.loc[df["populasi_ribu"].idxmax()]
 terkecil = df.loc[df["populasi_ribu"].idxmin()]
 
@@ -49,12 +34,7 @@ print(terbesar[["kabupaten_kota", "populasi_ribu"]])
 print("\n=== POPULASI TERKECIL ===")
 print(terkecil[["kabupaten_kota", "populasi_ribu"]])
 
-# =========================
-
 # 4. GRAFIK POPULASI
-
-# =========================
-
 plt.figure(figsize=(10,6))
 
 sns.barplot(
@@ -74,12 +54,7 @@ plt.show()
 
 print("Grafik Populasi berhasil disimpan!")
 
-# =========================
-
 # 5. GRAFIK KEPADATAN
-
-# =========================
-
 plt.figure(figsize=(10,6))
 
 sns.barplot(
@@ -99,12 +74,7 @@ plt.show()
 
 print("Grafik Kepadatan berhasil disimpan!")
 
-# =========================
-
 # 6. LAJU PERTUMBUHAN
-
-# =========================
-
 plt.figure(figsize=(10,6))
 
 sns.barplot(
@@ -124,12 +94,7 @@ plt.show()
 
 print("Grafik Pertumbuhan berhasil disimpan!")
 
-# =========================
-
 # 7. KESIMPULAN
-
-# =========================
-
 print("\n")
 print("=" * 50)
 print("KESIMPULAN")
