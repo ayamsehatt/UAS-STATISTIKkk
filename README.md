@@ -1,2 +1,4 @@
-# UAS-STATISTIKkk
-Flesh Exel Saputra Tangkidi_F521251001_SI A
+# UAS-STATISTIK
+Flesh Exel Saputra Tangkidi
+F521251001
+SI A
